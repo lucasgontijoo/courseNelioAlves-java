@@ -15,8 +15,6 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		Worker worker = new Worker();
-		
 		System.out.print("Enter department's name: ");
 		Departament departament = new Departament(sc.nextLine());
 		
@@ -30,11 +28,7 @@ public class Program {
 		System.out.print("Base salary: ");
 		double baseSalary = sc.nextDouble();
 		
-		worker.setDepartament(departament);
-		worker.setName(name);
-		worker.setLevel(level);
-		worker.setBaseSalary(baseSalary);
-		
+		Worker worker = new Worker(name, level, baseSalary, departament);
 		
 		System.out.print("How many contracts to this worker? ");
 		int N = sc.nextInt();

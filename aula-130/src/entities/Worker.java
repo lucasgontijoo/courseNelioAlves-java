@@ -7,7 +7,7 @@ public class Worker {
 	private String name;
 	private WorkerLevel level;
 	private Double baseSalary;
-	private List<HourContract> contracts = new ArrayList();
+	private List<HourContract> contracts = new ArrayList<>();
 	private Departament departament;
 	
 	public Worker(String name, WorkerLevel level, Double baseSalary, Departament departament) {
@@ -53,8 +53,8 @@ public class Worker {
 		contracts.remove(contract);
 	}
 	
-	public Double income(Integer year, Integer month) {
-		Double income = baseSalary;
+	public Double income(int year, int month) {
+		double income = baseSalary;
 		
 		for(int i = 0; i<contracts.size(); i++) {
 			if(contracts.get(i).getDateYear() == year && contracts.get(i).getDateMonth() == month) {
