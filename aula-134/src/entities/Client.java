@@ -1,5 +1,15 @@
 package entities;
 
-public class Client {
+import java.time.LocalDate;
 
+public class Client {
+	private String name;
+	private String email;
+	private LocalDate birthDate;
+	
+	public Client(String name, String email, LocalDate birthDate) {
+		this.name = name;
+		this.email = email;
+		this.birthDate = birthDate;
+	}
 }
