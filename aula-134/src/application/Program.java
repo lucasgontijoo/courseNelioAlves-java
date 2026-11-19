@@ -33,6 +33,7 @@ public class Program {
 		DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		
 		Client client = new Client(nameClient, emailClient, LocalDate.parse(birthDateClient, format));
+		order.setClient(client);
 		
 		System.out.println("Enter order data:");
 		System.out.print("Status: ");

@@ -4,7 +4,6 @@ import java.time.Instant;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import entities.enums.OrderStatus;
@@ -20,14 +19,20 @@ public class Order {
 		return items;
 	}
 
-	public Order(Instant moment, OrderStatus status) {
+	public Order(Instant moment, OrderStatus status, Client client) {
 		this.moment = moment;
 		this.status = status;
+		this.client = client;
 	}
 	
 	public Order(Instant moment) {	
 		this.moment = moment;
 	}
+	
+	public void setClient(Client client) {
+		this.client = client;
+	}
+	
 	public OrderStatus getStatus() {
 		return status;
 	}
